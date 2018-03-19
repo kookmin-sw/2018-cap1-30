@@ -20,7 +20,7 @@ Most of the existing test tools are inefficient because they are mostly tested o
 In order to solve this inefficiency, Fadu decided to make the new test system that overcomes the limitations of existing tools as an industry-university project.
 
 ### IV. 소개 영상
-업로드 예정
+[![Alt text for your video](https://img.youtube.com/vi/adJaV64t9XQ/0.jpg)](https://youtu.be/adJaV64t9XQ)
 
 ### V.  결과 영상
 업로드 예정
