@@ -8,6 +8,7 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "async": "^2.6.0",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.15.1",
     "compression": "^1.6.2",

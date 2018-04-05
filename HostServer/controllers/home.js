@@ -3,6 +3,7 @@ var os = require('os');
 var ifaces = os.networkInterfaces();
 var http = require('http');
 var request = require('request');
+var async = require('async');
 /*
 
 Object.keys(ifaces).forEach(function (ifname) {
@@ -41,32 +42,64 @@ exports.index = function(req, res) {
 /**
  * GET /page2
  */
-exports.go_another_page = function(req, res) {
- res.render('page2', {
-    title: 'page2'
-  });
+exports.go_start_page = function(req, res) {
+  res.render('page2', {
+     title: 'page2'
+   });
   console.log(res.body);
 };
 
 
 /**
- * POST /page2
+ * POST /page3
  */
-exports.send_sequest = function(req, res) {
-  console.log(req.body);
+exports.send_request = function(req, res) {
   msg = new MSG({
-    start_Username: 'teeeest',
+    start_Username: 'test',
     script_name: 'eeest'
   });
-  //request.get("http://localhost:3005");
-  var options = {
-    method:'POST',
-    uri: 'http://169.254.39.225:3030',
-    body: msg,
-    json: true
-  };
-  request(options);
+  var tmp = "";
 
-  res.redirect('/page2');
+  async.waterfall(
+    [
+      function(callback){
+        var options = {
+          method:'POST',
+          uri: 'http://169.254.131.180:3000',
+          //uri: 'http://localhost:3005',
+          body: msg,
+          json: true
+        };
+        request(options, function(err, res, body) {
+          if(err)
+          {
+            console.log(err);
+            callback(true);
+            return;
+          }
+          console.log(body);
+          obj = res.body;
+          tmp = res.body;
+          callback(false, obj);
+        });
 
+
+      },
+    function(){
+      res.render('page3', {
+         title: 'page3',
+         time: Date(),
+         result: tmp
+       });
+
+    }
+    ], function(err, result){
+      if(err) {
+        console.log(err);
+        res.send(500, 'Server Error');
+        return;
+      }
+      res.send({api1:result[0]},{api2:result[1]});
+    }
+  )
 };

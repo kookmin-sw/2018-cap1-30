@@ -28,8 +28,9 @@ mongoose.connection.on('error', function() {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.set('port', process.env.PORT || 3000);
+app.set('view options', { pretty: true });
 app.use(compression());
-app.use(logger('dev'));
+app.use(logger('combined'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
@@ -39,9 +40,8 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', HomeController.index);
-app.get('/page2', HomeController.go_another_page);
-app.post('/page2',HomeController.send_sequest);
-
+app.get('/page2', HomeController.go_start_page);
+app.post('/page2',HomeController.send_request);
 // Production error handler
 if (app.get('env') === 'production') {
   app.use(function(err, req, res, next) {
