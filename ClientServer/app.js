@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var exec = require('child_process').exec;
 var async = require('async');
-var request = require('request');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -17,7 +16,6 @@ app.get('/', function(req, res){
 
 app.post('/', function(req, res){
   var name = req.body.script_name;
-  var test = req.body.test;
   console.log(req.body);
   var tasks = [
     function(callback){
