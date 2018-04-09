@@ -16,7 +16,8 @@ dotenv.load();
 
 // Controllers
 var HomeController = require('./controllers/home');
-
+var ListController = require('./controllers/getlist');
+var PostConfigController = require('./controllers/postconfig');
 var app = express();
 
 
@@ -40,8 +41,13 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', HomeController.index);
+
 app.get('/page2', HomeController.go_start_page);
 app.post('/page2',HomeController.send_request);
+
+app.get('/getlist', ListController.index);
+app.post('/postconfig', PostConfigController.post);
+
 // Production error handler
 if (app.get('env') === 'production') {
   app.use(function(err, req, res, next) {
