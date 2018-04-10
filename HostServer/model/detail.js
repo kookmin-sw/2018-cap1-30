@@ -4,8 +4,7 @@ var scriptSchema = require('../model/result');
 
 var detailSchema = new Schema({
   result_id: { type: Schema.Types.ObjectId, ref: 'result' },
-  times:[],
-  values:[]
+  logs:[]
 });
 
 var detail = mongoose.model('detail', detailSchema);
