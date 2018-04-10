@@ -17,7 +17,9 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
+  var id = req.body._id;
   var name = req.body.name;
+  var standardOut = "";
   var read = JSON.parse(req.body.read);
   var write = JSON.parse(req.body.write);
   var rand = JSON.parse(req.body.rand);
@@ -32,11 +34,11 @@ app.post('/', function(req, res) {
 
   readwrite_arr[0][0][0] = "error";
   readwrite_arr[0][0][1] = "error";
-  readwrite_arr[0][1][0] = "swqr";
-  readwrite_arr[0][1][1] = "randw";
-  readwrite_arr[1][0][0] = "seqr";
-  readwrite_arr[1][0][1] = "randr";
-  readwrite_arr[1][1][0] = "seqrw";
+  readwrite_arr[0][1][0] = "write";
+  readwrite_arr[0][1][1] = "randwrite";
+  readwrite_arr[1][0][0] = "read";
+  readwrite_arr[1][0][1] = "randread";
+  readwrite_arr[1][1][0] = "rw";
   readwrite_arr[1][1][1] = "randrw";
 
   console.log(req.body);
@@ -50,7 +52,7 @@ app.post('/', function(req, res) {
 
         var config = "[global] \n readwrite=" + readwrite_arr[read][write][rand] + "\n";
         for(var i in req.body){
-          if(i == 'name' || i == 'read' || i == 'write' || i == 'rand'){
+          if(i == 'name' || i == 'read' || i == 'write' || i == 'rand' || i == '_id'){
             continue;
           }
           else{
@@ -83,27 +85,38 @@ app.post('/', function(req, res) {
           console.log(stderr);
           if (err != null) {
             console.log("error: " + err);
+          }else{
+            standardOut += stdout;
           }
           console.log("Exec test Success");
           callback(null, '2');
         });
       },
 
-      function(callback){
-        var logList = new Array('bw_bw.1.log', 'iops_iops.1.log', 'lat_clat.1.log', 'lat_lat.1.log', 'lat_slat.1.log');
-        var jsonList = new Array(5);
+      function(callback) {
+        var logList = fs.readdirSync('/mnt/c/Users/fadu-4/nodejsWorkplace/testServer/server/log'); //로그파일 이름
+        var logNameList = new Array('bw', 'iops', 'clat', 'lat', 'slat', 'id', 'stdout');
+        var jsonList = new Object(); // 최종 json 데이터
 
-        for(var i=0; i<logList.length; i++){
-          var data = fs.readFileSync('/root/fio_script/tmp/'+logList[i], 'utf-8');
+        for (var i = 0; i < logList.length; i++) {
+          var data = fs.readFileSync('/mnt/c/Users/fadu-4/nodejsWorkplace/testServer/server/log/' + logList[i], 'utf-8');
+          var resultList = new Array(); //한 log파일에 대한 데이터
           var arr = data.split('\n');
+          for (var j = 0; j < arr.length - 1; j++) {
+            var sub = new Object();
+            arr[j] = arr[j].split(', ');
+            sub['time'] = arr[j][0];
+            sub['value'] = arr[j][1];
+            sub['r/w'] = arr[j][2];
+            sub['unknown'] = arr[j][3];
 
-          for(var j=0; j<arr.length-1; j++){
-            arr[j] = arr[j].split(',');
+            resultList[j] = sub;
           }
-          jsonList[i] = arr;
+          jsonList[logNameList[i]] = resultList;
         }
+        jsonList[logNameList[5]] = id;
+        jsonList[logNameList[6]] = standardOut;
         res.json(jsonList);
-        console.log("json success");
       }
     ],
 
