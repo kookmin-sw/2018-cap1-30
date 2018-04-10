@@ -18,6 +18,7 @@ dotenv.load();
 var HomeController = require('./controllers/home');
 var ListController = require('./controllers/getlist');
 var PostConfigController = require('./controllers/postconfig');
+var SaveDetailController = require('./controllers/savedetail');
 var app = express();
 
 
@@ -46,7 +47,10 @@ app.get('/page2', HomeController.go_start_page);
 app.post('/page2',HomeController.send_request);
 
 app.get('/getlist', ListController.index);
+
 app.post('/postconfig', PostConfigController.post);
+
+app.post('/savedetail', SaveDetailController.post);
 
 // Production error handler
 if (app.get('env') === 'production') {
