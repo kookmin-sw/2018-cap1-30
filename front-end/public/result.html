@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./result.json"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    class Result extends React.Component {
+
+      constructor(props) {
+        super(props)
+        axios.get('./result.json')
+             .then((response) =>
+           console.log(response))
+      }
+
+
+      render() {
+        return (
+          <div>
+            hi
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<Result/>, document.getElementById("root"));
+  </script>
+</body>
+</html>

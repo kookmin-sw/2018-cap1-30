@@ -1,4 +1,0 @@
-[ {"name": "read"},
-  {"name": "write"},
-  {"name": "randRead"},
-  {"name": "randWrite"}]
