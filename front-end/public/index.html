@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/5.0.0/reactstrap.full.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor(props) {
+        super(props)
+        this.state = {
+          scripts: []
+        }
+      }
+
+      componentWillMount() {
+        var self = this
+        axios.get('/getlist')
+            .then((response) => {
+            this.setState({scripts: response.data})
+          })
+      }
+
+      render(){
+        return (
+          <div>
+          {this.state.scripts.map((e) => {
+            return (
+              <button>{e}</button>
+            )})}
+          </div>
+
+
+         )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+{
+    "bw": [
+        {
+            "time": "1000",
+            "value": "2446080",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "2000",
+            "value": "2453120",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "3000",
+            "value": "2455040",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "4000",
+            "value": "2445312",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "5000",
+            "value": "2436096",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "6000",
+            "value": "2442368",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "7000",
+            "value": "2442752",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "8000",
+            "value": "2447616",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "9000",
+            "value": "2460672",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10000",
+            "value": "2444160",
+            "r/w": "0",
+            "unknown": "0"
+        }
+    ],
+    "iops": [
+        {
+            "time": "1000",
+            "value": "19110",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "2000",
+            "value": "19165",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "3000",
+            "value": "19180",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "4000",
+            "value": "19104",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "5000",
+            "value": "19032",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "6000",
+            "value": "19081",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "7000",
+            "value": "19084",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "8000",
+            "value": "19122",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "9000",
+            "value": "19224",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10000",
+            "value": "19095",
+            "r/w": "0",
+            "unknown": "0"
+        }
+    ],
+    "clat": [
+        {
+            "time": "1000",
+            "value": "6652004",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "2000",
+            "value": "6656871",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "3000",
+            "value": "6659046",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "4000",
+            "value": "6701805",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "5000",
+            "value": "6714522",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "6000",
+            "value": "6713362",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "7000",
+            "value": "6695301",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "8000",
+            "value": "6670175",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "9000",
+            "value": "6657568",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10000",
+            "value": "6674265",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10012",
+            "value": "18127747",
+            "r/w": "0",
+            "unknown": "0"
+        }
+    ],
+    "lat": [
+        {
+            "time": "1000",
+            "value": "6656045",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "2000",
+            "value": "6669719",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "3000",
+            "value": "6666889",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "4000",
+            "value": "6711333",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "5000",
+            "value": "6719536",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "6000",
+            "value": "6718335",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "7000",
+            "value": "6701216",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "8000",
+            "value": "6680088",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "9000",
+            "value": "6669761",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10000",
+            "value": "6687177",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10012",
+            "value": "18140736",
+            "r/w": "0",
+            "unknown": "0"
+        }
+    ],
+    "slat": [
+        {
+            "time": "1000",
+            "value": "3981",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "2000",
+            "value": "12671",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "3000",
+            "value": "7739",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "4000",
+            "value": "9318",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "5000",
+            "value": "4896",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "6000",
+            "value": "4895",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "7000",
+            "value": "5855",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "8000",
+            "value": "9699",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "9000",
+            "value": "12094",
+            "r/w": "0",
+            "unknown": "0"
+        },
+        {
+            "time": "10012",
+            "value": "12645",
+            "r/w": "0",
+            "unknown": "0"
+        }
+    ],
+    "id": "123456789",
+    "stdout": "fio_job: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128\nfio-3.1\nStarting 1 thread\n\nfio_job: (groupid=0, jobs=1): err= 0: pid=3189: Tue Apr 10 16:46:03 2018\n   read: IOPS=19.1k, BW=2388MiB/s (2504MB/s)(23.4GiB/10013msec)\n    slat (usec): min=2, max=893, avg= 8.38, stdev= 7.33\n    clat (usec): min=52, max=24729, avg=6687.04, stdev=3319.73\n     lat (usec): min=55, max=24739, avg=6695.57, stdev=3319.70\n    clat percentiles (usec):\n     |  1.00th=[  578],  5.00th=[ 1139], 10.00th=[ 2180], 20.00th=[ 3654],\n     | 30.00th=[ 4555], 40.00th=[ 5538], 50.00th=[ 6652], 60.00th=[ 7767],\n     | 70.00th=[ 8848], 80.00th=[ 9765], 90.00th=[11338], 95.00th=[12125],\n     | 99.00th=[13304], 99.50th=[13829], 99.90th=[15664], 99.95th=[16319],\n     | 99.99th=[22676]\n   bw (  MiB/s): min= 2379, max= 2403, per=100.00%, avg=2389.96, stdev= 6.97, samples=10\n   iops        : min=19032, max=19224, avg=19119.70, stdev=55.76, samples=10\n  lat (usec)   : 100=0.10%, 250=0.19%, 500=0.40%, 750=1.22%, 1000=1.88%\n  lat (msec)   : 2=5.58%, 4=14.63%, 10=58.60%, 20=17.39%, 50=0.02%\n  cpu          : usr=3.23%, sys=20.88%, ctx=138479, majf=0, minf=523\n  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%\n     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%\n     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%\n     issued rwt: total=191324,0,0, short=0,0,0, dropped=0,0,0\n     latency   : target=0, window=0, percentile=100.00%, depth=128\n\nRun status group 0 (all jobs):\n   READ: bw=2388MiB/s (2504MB/s), 2388MiB/s-2388MiB/s (2504MB/s-2504MB/s), io=23.4GiB (25.1GB), run=10013-10013msec\n\nDisk stats (read/write):\n  nvme0n1: ios=189241/0, merge=0/0, ticks=1261072/0, in_queue=1262051, util=99.10%\n"
+}
